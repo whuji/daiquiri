@@ -7,9 +7,8 @@ import daiquiri
 # `python-json-logger`)
 daiquiri.setup(level=logging.INFO, outputs=(
     daiquiri.output.Stream(sys.stdout),
-    daiquiri.output.File("/dev/null",
-                         formatter=daiquiri.formatter.JSON_FORMATTER),
-    ))
+    daiquiri.output.File("/dev/null")
+    )
 
 logger = daiquiri.getLogger(__name__, subsystem="example")
 logger.info("It works and log to stdout and /dev/null with JSON")
